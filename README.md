@@ -68,4 +68,4 @@ The script includes error handling to:
 This project is open source and available under the MIT License.
 
 ## Author
-Created by filips
+Created by Filip SP5FLS

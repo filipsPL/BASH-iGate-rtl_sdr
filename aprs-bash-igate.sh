@@ -3,7 +3,7 @@
 # comment for logging in and for initial welcome message
 COMMENT="BASH-iGate-rtl_sdr 0.21"
 
-cat << EOF
+cat <<EOF
 
 ░█▀▄░█▀█░█▀▀░█░█░░░░░▀█▀░█▀▀░█▀█░▀█▀░█▀▀
 ░█▀▄░█▀█░▀▀█░█▀█░▄▄▄░░█░░█░█░█▀█░░█░░█▀▀
@@ -31,14 +31,12 @@ if [ $? -ne 0 ]; then
 fi
 
 # Check if rtl_fm and multimon-ng are installed
-if ! command -v rtl_fm &> /dev/null
-then
+if ! command -v rtl_fm &>/dev/null; then
     echo "Error: rtl_fm is not installed. Please install it."
     exit 1
 fi
 
-if ! command -v multimon-ng &> /dev/null
-then
+if ! command -v multimon-ng &>/dev/null; then
     echo "Error: multimon-ng is not installed. Please install it."
     exit 1
 fi

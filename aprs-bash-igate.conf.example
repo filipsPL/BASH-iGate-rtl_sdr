@@ -1,0 +1,15 @@
+PORT=14580
+USERNAME="ANDY"
+CALLSIGN="SP0ABC-1"         # Your full callsign with SSID
+PASSCODE="11223"            # Your APRS-IS passcode
+FILTER="r/52.001/21.001/50" # Optional filter for your area
+LATITUDE="5200.00N"         # This should be 7 digits plus N - check precision
+LONGITUDE="02100.00E"       # This should be 8 digits plus E - check precision
+SYMBOL="r"                  # https://blog.thelifeofkenneth.com/2017/01/aprs-symbol-look-up-table.html
+ppm_error=-1                # ppm_error (default: 0) estimate eg using `rtl_test -p`
+#SERVER="radom.aprs2.net"
+SERVER="rotate.aprs2.net"
+
+# RTL-SDR Settings
+RTL_SDR_FREQUENCY="144800000"
+RTL_SDR_SAMPLE_RATE="22050" # You can add this too if needed

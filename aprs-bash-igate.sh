@@ -67,6 +67,12 @@ while :; do
     echo "$STATUS_PACKET" >&3
     echo "[$(date +"%F %T")] Sent status: $STATUS_PACKET"
 
+    URL="https://github.com/filipsPL/BASH-iGate-rtl_sdr 2025.04.03"
+    URL_PACKET="$CALLSIGN>APRS,qAS,$USERNAME:>$URL"
+    echo "$URL_PACKET" >&3
+    echo "[$(date +"%F %T")] Sent status: $URL_PACKET"
+
+
     # Start RTL-SDR and multimon-ng pipeline and process the output
     # Filter out RFONLY lines and only include APRS lines
     if ! $UNBUF_CMD rtl_fm -f 144800000 -s 22050 -o 4 -p 1 | $UNBUF_CMD multimon-ng -a AFSK1200 -A -t raw - | $UNBUF_CMD grep -E '^APRS: ' | $UNBUF_CMD grep -v "RFONLY" | while read line; do
